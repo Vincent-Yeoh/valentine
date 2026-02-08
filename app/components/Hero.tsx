@@ -42,7 +42,7 @@ const Hero = () => {
             transition={{ delay: 0.5 }}
             className="text-5xl md:text-7xl font-serif text-white mb-6"
           >
-            致<span className="text-red-400">我的灵魂伴侣 </span>
+            致<span className="text-red-300">我的灵魂伴侣 </span>
           </motion.h1>
 
           <motion.p 

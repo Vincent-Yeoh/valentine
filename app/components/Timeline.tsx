@@ -4,27 +4,45 @@ import { useRef } from "react";
 
 const milestones = [
   {
-    date: "March 21, 2024",
-    title: "The Beginning",
-    description: "The day we had our first date and everything changed.",
-    icon: "✨",
+    date: "2024年1月",
+    title: "缘分的开始", // The Start of Fate
+    description: "我们在公司初次相遇，那一刻，我体会到了什么是心动。", 
+    // "We met at the office. In that moment, I understood what it meant for a heart to flutter."
+    icon: "💼",
   },
   {
-    date: "August 2024",
-    title: "Our First Summer",
-    description: "Beach trips and ice cream dates.",
-    icon: "☀️",
+    date: "2024年3月21日",
+    title: "勇敢的告白", // A Brave Confession
+    description: "在五味茶城，我终于向你诉说了心意。那是我们故事的正式开篇。",
+    // "At Wuwei Tea City, I finally told you how I felt. That was the official opening of our story."
+    icon: "🍵",
   },
   {
-    date: "December 2024",
-    title: "The Holidays",
-    description: "Our first Christmas together, keeping each other warm.",
+    date: "2024年3月24日",
+    title: "初次约会", // First Date
+    description: "一起逛街、看电影，简单的时光里全是甜甜的空气。",
+    // "Shopping and movies together; simple moments filled with sweet air."
+    icon: "🎬",
+  },
+  {
+    date: "2024年12月",
+    title: "温暖的圣诞", // Warm Christmas
+    description: "我们一起度过的第一个圣诞节，在这个寒冬，你是最温暖的存在。",
+    // "Our first Christmas together. In this cold winter, you are the warmest presence."
     icon: "🎄",
   },
   {
-    date: "March 21, 2026",
-    title: "2 Full Years",
-    description: "The best two years of my life. Here's to forever.",
+    date: "2025年3月21日",
+    title: "周年纪念", // Anniversary
+    description: "一年的相守，让我们更加确信彼此就是那个对的人。",
+    // "A year of being together made us even more certain that we are the right ones for each other."
+    icon: "✨",
+  },
+  {
+    date: "2026年3月21日",
+    title: "两载春秋", // Two Years (Poetic)
+    description: "这是我人生中最幸福的两年。往后余生，愿始终有你。",
+    // "The happiest two years of my life. For the rest of my life, I wish to always have you."
     icon: "♾️",
   },
 ];
