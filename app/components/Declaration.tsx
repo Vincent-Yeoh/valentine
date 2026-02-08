@@ -4,22 +4,48 @@ import confetti from "canvas-confetti";
 
 const Declaration = () => {
   // Trigger heart confetti when she reaches the end
-  const handleConfetti = () => {
+const handleConfetti = () => {
+  // 检测是否为移动端
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
+  const count = isMobile ? 40 : 100; // 手机端减少到40个粒子
+  const defaults = {
+    origin: { y: 0.7 },
+    zIndex: 999, // 确保在最上层
+    disableForReducedMotion: true
+  };
+
+  // 手机端只喷射两次，不再使用循环，防止崩溃
+  if (isMobile) {
+    confetti({
+      ...defaults,
+      particleCount: count,
+      spread: 60,
+      scalar: 0.8, // 粒子稍微小一点
+    });
+    // 延迟一秒喷射另一边
+    setTimeout(() => {
+      confetti({
+        ...defaults,
+        particleCount: count,
+        spread: 80,
+      });
+    }, 1000);
+  } else {
+    // 电脑端保持原来的酷炫效果
     const duration = 5 * 1000;
     const animationEnd = Date.now() + duration;
-    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
-
-    const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
 
     const interval: any = setInterval(function() {
       const timeLeft = animationEnd - Date.now();
       if (timeLeft <= 0) return clearInterval(interval);
 
       const particleCount = 50 * (timeLeft / duration);
-      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
-      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+      confetti({ ...defaults, particleCount, origin: { x: 0.2, y: Math.random() - 0.2 } });
+      confetti({ ...defaults, particleCount, origin: { x: 0.8, y: Math.random() - 0.2 } });
     }, 250);
-  };
+  }
+};
 
   const bounceEffect = {
     whileHover: { scale: 1.02, color: "#f87171" }, // Glows red on hover    
