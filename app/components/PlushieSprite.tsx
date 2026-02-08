@@ -5,9 +5,10 @@ import { useState } from "react";
 interface PlushieProps {
   src: string;
   position: "left" | "right";
+  delay?: number
 }
 
-const PlushieSprite = ({ src, position }: PlushieProps) => {
+const PlushieSprite = ({ src, position, delay = 0 }: PlushieProps) => {
   const [isTwirling, setIsTwirling] = useState(false);
   
   // 1. Hook into the page scroll
