@@ -6,7 +6,7 @@ import PlushieSprite from './components/PlushieSprite';
 
 export default function Home() {
   return (
-    <main className="bg-[#0f0a0a] selection:bg-red-500/30">
+  <main className="bg-[#0f0a0a] min-h-screen overflow-x-hidden relative">
       <Hero />
       <Timeline />
       <Declaration />
